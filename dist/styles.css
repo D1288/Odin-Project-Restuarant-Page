@@ -1,16 +1,90 @@
-*{
+
+/* Style the body element */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  }
+  
+  /* Style the header element */
+  h1 {
+    font-size: 48px;
+    text-align: center;
+    margin: 0;
+    padding: 50px 0;
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  /* Style the content container */
+  #content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  /* Style the pizza man image */
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 30px;
+  }
+  
+  /* Style the description text */
+  h3 {
+    font-size: 20px;
+    text-align: justify;
+    margin: 30px 0;
+  }
 
-body{
-    margin: auto;
-}
-
-h1{
-    font-size: 100px;
-    background-color: gray;
+  .menu-item{
     display: flex;
-    width: 100vw;
-}
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .menu-item h3{
+    text-align: center;
+  }
+  /* Style the nav element */
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  /* Style the buttons in the nav element */
+  nav button {
+    background-color: #ffc107;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Style the buttons when hovered over */
+  nav button:hover {
+    background-color: #ffa000;
+  }
+  
+  /* Style the footer element */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style links in the footer */
+  footer a {
+    color: #fff;
+  }
+  
+  /* Style links in the footer when hovered over */
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

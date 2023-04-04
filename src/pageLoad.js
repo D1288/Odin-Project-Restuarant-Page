@@ -2,28 +2,34 @@ import { generateAboutUs } from "./about";
 import { generateMenu } from "./menu";
 
 export function generateHomePage() {
-    const content = document.querySelector('#content');
-    content.innerHTML = ''
+  const content = document.querySelector('#content');
+  content.innerHTML = '';
 
+  const header = document.createElement('h1');
+  header.textContent = 'Hu-Za!';
 
-    const header = document.createElement('h1');
-    const pizzaMan = document.createElement('img')
-    const description = document.createElement('h3')
-    const aboutButton = document.createElement('button');
-    const menubutton = document.createElement('button');
+  const pizzaMan = document.createElement('img');
+  pizzaMan.setAttribute('src', '../img/pizza.png');
 
+  const description = document.createElement('h3');
+  description.textContent = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
+                             dignissimos reprehenderit autem nulla nostrum eligendi, officia amet
+                             explicabo minima ducimus voluptas, corrupti nesciunt! Blanditiis,
+                             molestias ? Earum neque illo exercitationem perferendis!`;
 
-    header.textContent = 'Hu-Za!'
-    pizzaMan.setAttribute('src', '../img/pizza.png')
-    description.textContent = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
-                           dignissimos reprehenderit autem nulla nostrum eligendi, officia amet
-                           explicabo minima ducimus voluptas, corrupti nesciunt! Blanditiis,
-                           molestias ? Earum neque illo exercitationem perferendis!`;
+  const nav = document.createElement('nav');
 
-    content.append(header, pizzaMan, description, aboutButton, menubutton)
+  const homeButton = document.createElement('button');
+  homeButton.textContent = 'Home';
 
-    aboutButton.textContent = 'About Us';
-    menubutton.textContent = 'Menu'
-    aboutButton.addEventListener('click', generateAboutUs)
-    menubutton.addEventListener('click', generateMenu)
+  const aboutButton = document.createElement('button');
+  aboutButton.textContent = 'About Us';
+  aboutButton.addEventListener('click', generateAboutUs);
+
+  const menuButton = document.createElement('button');
+  menuButton.textContent = 'Menu';
+  menuButton.addEventListener('click', generateMenu);
+
+  nav.append(homeButton, aboutButton, menuButton);
+  content.append(header, nav, pizzaMan, description);
 }
